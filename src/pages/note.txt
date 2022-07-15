@@ -1,0 +1,27 @@
+const factorial = (number: number) => {
+    let result = 1;
+    for (let i = 1; i <= number; i++) {
+      result *= i;
+    }
+    return result;
+  };
+
+  const func = (col: number, row: number) => {
+    return factorial(row) / (factorial(col) * factorial(row - col));
+  };
+
+  const pascalsTriangle = (num: number) => {
+    let result = "";
+    for (let i = 0; i <= num; i++) {
+      result = result + func(i, num) + " ";
+    }
+    console.log(result);
+  };
+
+  const main = (num: number) => {
+    for (let i = 0; i < num; i++) {
+      pascalsTriangle(i);
+    }
+  };
+
+  main(10);

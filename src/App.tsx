@@ -1,24 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useContext } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Layout from "./pages/Layout";
+import Home from "./pages/Home";
+import Project from "./pages/Project";
+import ProjectList from "./pages/ProjectList";
+import { ProjectContext } from "./context/ProjectContext";
+import ProjectLayout from "./pages/ProjectLayout";
 
 function App() {
+  const { projects } = useContext(ProjectContext);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Routes>
+          <Route path={"/"} element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path={"/project"} element={<Project />}>
+              <Route index element={<ProjectList />} />
+              {projects.map((item, index) => (
+                <Route
+                  key={index}
+                  path={item.href}
+                  element={<ProjectLayout data={item} />}
+                />
+              ))}
+            </Route>
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
