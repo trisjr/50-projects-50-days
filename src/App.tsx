@@ -6,6 +6,7 @@ import Project from "./pages/Project";
 import ProjectList from "./pages/ProjectList";
 import { ProjectContext } from "./context/ProjectContext";
 import ProjectLayout from "./pages/ProjectLayout";
+import ErrorPage from "./pages/Error";
 
 function App() {
   const { projects } = useContext(ProjectContext);
@@ -27,6 +28,7 @@ function App() {
               ))}
             </Route>
           </Route>
+          <Route path={"/*"} element={<ErrorPage />} />
         </Routes>
       </BrowserRouter>
     </div>
