@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/50-projects-50-days/static/css/main.741ea953.css",
-    "main.js": "/50-projects-50-days/static/js/main.69857368.js",
-    "index.html": "/50-projects-50-days/index.html",
-    "main.741ea953.css.map": "/50-projects-50-days/static/css/main.741ea953.css.map",
-    "main.69857368.js.map": "/50-projects-50-days/static/js/main.69857368.js.map"
+    "main.css": "vokimtrivkt.github.io/50-projects-50-days/static/css/main.741ea953.css",
+    "main.js": "vokimtrivkt.github.io/50-projects-50-days/static/js/main.3a568d3e.js",
+    "index.html": "vokimtrivkt.github.io/50-projects-50-days/index.html",
+    "main.741ea953.css.map": "vokimtrivkt.github.io/50-projects-50-days/static/css/main.741ea953.css.map",
+    "main.3a568d3e.js.map": "vokimtrivkt.github.io/50-projects-50-days/static/js/main.3a568d3e.js.map"
   },
   "entrypoints": [
     "static/css/main.741ea953.css",
-    "static/js/main.69857368.js"
+    "static/js/main.3a568d3e.js"
   ]
 }
